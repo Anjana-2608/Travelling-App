@@ -1,4 +1,4 @@
-:root{
+:root {
     --bannerGap: 24px;
 }
 
@@ -9,7 +9,7 @@
 }
 
 #logo {
-    margin: 20px;
+    margin: 50px;
 }
 
 #logo img {
@@ -51,8 +51,9 @@
     opacity: 0.5;
 }
 
-#homePageContainer{    
+#homePageContainer {
     position: relative;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 #homePageContainer::before {
@@ -70,7 +71,7 @@
     z-index: -1;
 }
 
-.homePageBanner{
+.homePageBanner {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -79,23 +80,118 @@
     /* height: 300px; */
 }
 
-.homePageBanner .form {
-    border: 1px solid red;
-    height: 10px;
-    width:100%
+.homePageBanner .heading {
+    color: rgb(255, 255, 255);
+    font-size: 40px;
 }
 
-/* .homePageBanner .form {
-    border: 1px solid red;
-    height: 10px;
-    width:100%
+.homePageBanner .description {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.homePageBanner .description p {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .homePageBanner .form {
-    border: 1px solid red;
-    height: 10px;
-    width:100%
-} */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+   gap: 16px;
+    width: 660px;
+    background-color: white;
+    padding: 8px 8px 8px 24px;
+}
+
+.homePageBanner .formContainer {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 40px;
+    overflow: hidden;
+}
 
 
 
+
+
+.homePageBanner .form img {
+    border: 2px solid transparent;
+    padding: 5px;
+    margin: left -31px;
+    ;
+    height: 40px
+}
+
+#searchIconContainer{
+    background-color: #FAD87A;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+
+
+.homePageBanner .form #firstpart {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    gap: 16px;
+    width:44%;
+}
+
+.homePageBanner .form #firstpart input{
+   width:100%;
+   border-right: 1px solid black;
+}
+
+.homePageBanner .form #secondpart {
+    display: flex;
+    align-items: center;
+    position:relative;
+    width:22%;
+}
+
+.homePageBanner .form #secondpart .fa-calendar{
+    position:absolute;
+    right: 5px;
+}
+
+.homePageBanner .form #secondpart input{
+    width:100%;
+    border-right: 1px solid black;
+    font-size:17px;
+}
+
+.homePageBanner .form input[type="number"]
+{
+    width:22%;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+.homePageBanner .form input{
+    border:none;
+    font-size: 16px;
+}
+
+.fa-location-dot{
+    font-size: 22px;
+}
+
+#features {
+    display: grid;
+    height: 15.3rem;
+    background-color:#399b60;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+#features .featuresSection {
+    padding: 40px;
+}
