@@ -185,13 +185,51 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 #features {
     display: grid;
-    height: 15.3rem;
+    height: 14rem;
     background-color:#399b60;
     grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
     justify-content: center;
 }
 
 #features .featuresSection {
     padding: 40px;
+    margin-left: 20px ;
+}
+
+#features .featuresSection .FeatuturesIconAndHeading{
+    display:flex;
+    align-items: center;
+    gap: 16px;
+    line-height: 65px;
+    color: white;
+   }
+
+#features .featuresSection p{
+    color: white;
+    font-size: 18px;
+    font-family: Karla;
+}
+
+#features .featuresSection .FeatuturesIconAndHeading .featureIcon{
+    font-size: 25px;
+    color: #f7d18c;
+}
+
+
+
+
+.button ul{
+    display:flex;
+    list-style-type: none;
+    justify-content: center;
+}
+
+.button ul li{
+    margin:7px;
+    border: 1px solid black;
+
+}
+
+.button ul li .firstButton{
+    
 }
