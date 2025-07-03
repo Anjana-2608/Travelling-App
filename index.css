@@ -215,21 +215,82 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     color: #f7d18c;
 }
 
+.Seetheworld{
+    margin:50px;
+    padding:20px;
+    text-align: center;
+}
 
-
+.Seetheworld h2{
+    font-size: 55px;
+    font-style: normal;
+    text-align: center;
+    font-family: Cormorant Infant;
+    line-height: 110px;
+}
+.Seetheworld p{
+    font-size: 20px;
+    width: 40%;
+    margin:auto;
+}
 
 .button ul{
     display:flex;
     list-style-type: none;
     justify-content: center;
+
 }
 
 .button ul li{
-    margin:7px;
     border: 1px solid black;
-
+    border-radius: 30px;
+    height: 50px;
+    margin: 10px;
+    padding: 16px;
+    color: #352B2A;
+    border-color: #949AA5;
+    cursor:pointer;
+}
+.button ul .firstButton{
+    background-color: #fad87a;
+}
+.button ul .firstButton:hover{
+    opacity: 0.7;
+    transition: all 1s;
+}
+.button ul .buttons:hover{
+    background-color: #70b98e;
+    transition: all 1s;
+}
+.countriesContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 50px 80px;
+    grid-gap: 40px;
+}
+.countriesContainer .countries{
+  display:flex;
+  width: 35%;
+  flex-direction: column;
+  width: 100%;
+  line-height: 40px;
 }
 
-.button ul li .firstButton{
-    
+.countriesContainer .countries .Heading{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.countriesContainer .countries .subHeading{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height:60px;
+}
+
+.countriesContainer .countries .para{
+line-height: 20px;
+width: 80%;
+font-size: 16px
 }
