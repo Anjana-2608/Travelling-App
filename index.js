@@ -65,41 +65,50 @@ const countryData = [
 ];
 
 const createIndCountryHtml=(id,url,headingText,subHeadingText,paraText)=>{
-    let parentDiv=document.createElement('div');
-    parentDiv.setAttribute('class','countries');
-    parentDiv.setAttribute('id',id);
 
-    let imageEle=document.createElement('img');
-    imageEle.setAttribute('src',url);
-    imageEle.setAttribute('alt',id);
+    let countryDivSection = `<div class="countries" id=${id}>
+            <img src=${url} alt=${id}>
+            <span class="Heading">${headingText}</span>
+            <span class="subHeading">${subHeadingText}</span>
+            <span class="para">${paraText}</span>
+        </div>`
 
-    parentDiv.appendChild(imageEle);
+        return countryDivSection
+    // let parentDiv=document.createElement('div');
+    // parentDiv.setAttribute('class','countries');
+    // parentDiv.setAttribute('id',id);
 
-    let headingSpanEle=document.createElement('span');
-    headingSpanEle.className='Heading';
-    headingSpanEle.innerHTML=headingText;
+    // let imageEle=document.createElement('img');
+    // imageEle.setAttribute('src',url);
+    // imageEle.setAttribute('alt',id);
 
-    parentDiv.appendChild(headingSpanEle);
+    // parentDiv.appendChild(imageEle);
 
-    let subHeadingSpanEle=document.createElement('span');
-    subHeadingSpanEle.className='subHeading';
-    subHeadingSpanEle.innerHTML=subHeadingText;
+    // let headingSpanEle=document.createElement('span');
+    // headingSpanEle.className='Heading';
+    // headingSpanEle.innerHTML=headingText;
 
-    parentDiv.appendChild(subHeadingSpanEle);
+    // parentDiv.appendChild(headingSpanEle);
 
-    let paraSpanEle=document.createElement('span');
-    paraSpanEle.className='para';
-    paraSpanEle.innerHTML=paraText;
+    // let subHeadingSpanEle=document.createElement('span');
+    // subHeadingSpanEle.className='subHeading';
+    // subHeadingSpanEle.innerHTML=subHeadingText;
 
-    parentDiv.appendChild(paraSpanEle);
+    // parentDiv.appendChild(subHeadingSpanEle);
 
-    return parentDiv;
+    // let paraSpanEle=document.createElement('span');
+    // paraSpanEle.className='para';
+    // paraSpanEle.innerHTML=paraText;
+
+    // parentDiv.appendChild(paraSpanEle);
+
+    // return parentDiv;
 }
 
 const populateCountriesContainerDiv=()=>{
     let container=document.getElementsByClassName('countriesContainer')[0];
     countryData.map((obj)=>{
        let countryDiv= createIndCountryHtml(obj.id,obj.imageUrl,obj.heading,obj.subHeading,obj.description);
-        container.appendChild(countryDiv);
+        container.innerHTML = container.innerHTML + countryDiv
     })
 }
